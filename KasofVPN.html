@@ -1,0 +1,272 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>KasofVPN</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=DM+Sans:wght@400;500&display=swap">
+<style>
+/* Layout: single-column, centered hero with benefit grid */
+:root {
+  --bg: #0a0e1a;
+  --bg2: #111827;
+  --fg: #e8eaf2;
+  --muted: #8892a4;
+  --accent: #3b82f6;
+  --accent2: #60a5fa;
+  --border: rgba(255,255,255,0.08);
+  --card: rgba(255,255,255,0.04);
+  color-scheme: dark;
+}
+/* single theme — dark by design */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-block: 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  min-height: 100vh;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  max-width: 900px;
+  margin: 0 auto;
+}
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--fg);
+  letter-spacing: -0.01em;
+}
+.logo span { color: var(--accent2); }
+
+/* Hero */
+.hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 72px 0 56px;
+  text-align: center;
+}
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  background: rgba(59,130,246,0.12);
+  border: 1px solid rgba(59,130,246,0.25);
+  border-radius: 100px;
+  padding: 5px 14px;
+  margin-bottom: 24px;
+}
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  line-height: 1.1;
+  margin: 0 0 20px;
+  text-wrap: balance;
+  letter-spacing: -0.02em;
+}
+h1 em { font-style: normal; color: var(--accent2); }
+.sub {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 540px;
+  margin: 0 auto 36px;
+  text-wrap: balance;
+}
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 15px 32px;
+  border-radius: 10px;
+  transition: background 0.15s, transform 0.1s;
+}
+.cta:hover { background: var(--accent2); transform: translateY(-1px); }
+.cta svg { flex-shrink: 0; }
+
+/* Stats strip */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  max-width: 900px;
+  margin: 0 auto 56px;
+}
+.stat-item { text-align: center; }
+.stat-num {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.75rem;
+  color: var(--fg);
+  display: block;
+  font-variant-numeric: tabular-nums;
+}
+.stat-label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* Benefits */
+.benefits {
+  max-width: 900px;
+  margin: 0 auto 64px;
+}
+.section-label {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 36px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+}
+.card-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(59,130,246,0.12);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  color: var(--accent2);
+}
+.card h3 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.card p { font-size: 0.9rem; color: var(--muted); margin: 0; line-height: 1.55; }
+
+/* Footer CTA */
+.footer-cta {
+  max-width: 900px;
+  margin: 0 auto 48px;
+  background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(96,165,250,0.08));
+  border: 1px solid rgba(59,130,246,0.2);
+  border-radius: 20px;
+  padding: 48px 32px;
+  text-align: center;
+}
+.footer-cta h2 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin: 0 0 12px;
+  text-wrap: balance;
+}
+.footer-cta p { color: var(--muted); margin: 0 0 28px; font-size: 0.95rem; }
+
+footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 0 32px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+</style>
+
+<nav class="nav">
+  <div class="logo">Kasof<span>VPN</span></div>
+</nav>
+
+<section class="hero">
+  <div class="badge">Безопасный VPN-сервис</div>
+  <h1>Ваша приватность —<br><em>наш приоритет</em></h1>
+  <p class="sub">Быстрое и надёжное VPN-соединение. Защита данных, обход блокировок и анонимность в интернете.</p>
+  <a class="cta" href="https://kasofvpn.tilda.ws/?ref=tffrvan" target="_blank" rel="noopener">
+    Перейти на сайт
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</section>
+
+<div class="stats">
+  <div class="stat-item"><span class="stat-num">50+</span><span class="stat-label">Серверов</span></div>
+  <div class="stat-item"><span class="stat-num">AES‑256</span><span class="stat-label">Шифрование</span></div>
+  <div class="stat-item"><span class="stat-num">No-log</span><span class="stat-label">Политика</span></div>
+  <div class="stat-item"><span class="stat-num">24/7</span><span class="stat-label">Поддержка</span></div>
+</div>
+
+<section class="benefits">
+  <p class="section-label">Возможности</p>
+  <div class="grid">
+    <div class="card">
+      <div class="card-icon">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M12 2L4 7v5c0 5 3.6 9.7 8 11 4.4-1.3 8-6 8-11V7l-8-5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>Полная анонимность</h3>
+      <p>Ваш реальный IP скрыт. Никаких логов — мы не храним историю подключений.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 3c0 0 4 4 4 9s-4 9-4 9M12 3c0 0-4 4-4 9s4 9 4 9M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </div>
+      <h3>Снятие блокировок</h3>
+      <p>Доступ к любым сайтам и сервисам из любой точки мира без ограничений.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>Высокая скорость</h3>
+      <p>Оптимизированные серверы для потоковых сервисов и быстрого серфинга.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 11V7a4 4 0 0 1 8 0v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </div>
+      <h3>AES-256 шифрование</h3>
+      <p>Военный уровень защиты данных. Ни один провайдер не увидит ваш трафик.</p>
+    </div>
+  </div>
+</section>
+
+<div class="footer-cta">
+  <h2>Начните пользоваться прямо сейчас</h2>
+  <p>Простое подключение — без технических знаний. Работает на всех устройствах.</p>
+  <a class="cta" href="https://kasofvpn.tilda.ws/?ref=tffrvan" target="_blank" rel="noopener">
+    Подключиться
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</div>
+
+<footer>
+  © 2024 KasofVPN. Быстро. Надёжно. Анонимно.
+</footer>
+
+</body></html>
